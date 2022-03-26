@@ -4,7 +4,8 @@ import React from 'react';
 import './Card.css'
 
 const Card = (props) => {
-    const { name, price, img } = props.product;
+    const { addInCart, product } = props;
+    const { name, price, img, id } = product;
     return (
         <div className='product'>
             <img src={img} alt="" />
@@ -12,7 +13,7 @@ const Card = (props) => {
                 <h3>{name}</h3>
                 <p>Price: ${price}</p>
 
-                <button className='btn'>
+                <button onClick={() => addInCart(product)} className='btn'>
                     <p>Add to cart</p>
                     <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
                 </button>
