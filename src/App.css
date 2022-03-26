@@ -1,4 +1,7 @@
-  body{
+body{
   background-color: azure;
   margin: 0 4%;
+}
+.QA-section{
+  margin:3rem 2rem;
 }

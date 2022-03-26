@@ -21,7 +21,10 @@
     font-size: 15px;
     cursor: pointer;
 }
-/* .selected-item img{
-    width: 200px;
-    height: 250px;
-} */
+.hidden-item {
+    display: none;
+}
+.visible-item img{
+    width: 180px;
+    height: 200px;
+}
