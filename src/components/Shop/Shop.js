@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
+import './Shop.css'
 
 const Shop = () => {
     const [products, setProducts] = useState([])
@@ -9,6 +10,12 @@ const Shop = () => {
             .then(data => setProducts(data))
 
     }, [])
+
+    const [cart, setCart] = useState([])
+    const addInCart = (product) => {
+        const newCart = [...cart, product];
+        setCart(newCart);
+    }
     return (
         <div className='container'>
             <div className="products-container">
